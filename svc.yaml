@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app: nginx
-    version: blue   # Jenkins will update to green
+    version: green   # Jenkins will update to green
   ports:
   - port: 80
     targetPort: 80
