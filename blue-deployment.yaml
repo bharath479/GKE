@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:stable-perl
+        image: apache/airflow:slim-latest-python3.13
         ports:
         - containerPort: 80
