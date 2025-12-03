@@ -19,6 +19,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: bitnamicharts/nginx:sha256-119b4e05ec803609904bfdb2bf617e6e5a51262138822dfe02974b5add769f5d.att
+        image: bitnamicharts/nginx:sha256-6831c4e2913249afbe92d9b02d12107a8ac830531b876c985cb279eeae1c93ac
         ports:
         - containerPort: 80
