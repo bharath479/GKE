@@ -59,17 +59,14 @@ pipeline {
                     echo "Current Version in svc.yaml = ${version}"
 
                     if (version == "blue") {
-                        env.CURRENT_VERSION = "blue"
-                        env.NEW_VERSION = "green"
-                    } else if (version == "green") {
-                        env.CURRENT_VERSION = "green"
                         env.NEW_VERSION = "blue"
+                        env.CURRENT_VERSION = "green"
+                    } else if (version == "green") {
+                        env.NEW_VERSION = "green"
+                        env.CURRENT_VERSION = "blue"
                     } else {
                         error "svc.yaml does NOT contain version: blue or version: green"
                     }
-
-                    echo "CURRENT_VERSION = ${env.CURRENT_VERSION}"
-                    echo "NEW_VERSION = ${env.NEW_VERSION}"
                 }
             }
         }
