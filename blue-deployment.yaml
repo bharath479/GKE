@@ -22,3 +22,10 @@ spec:
         image: bitnamicharts/nginx:sha256-6831c4e2913249afbe92d9b02d12107a8ac830531b876c985cb279eeae1c93ac
         ports:
         - containerPort: 80
+        volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html
+      volumes:
+      - name: html
+        configMap:
+          name: green-html
